@@ -55,7 +55,7 @@ int main(void)
 	/*CCLK is set to 60Mhz by Startup code*/
 	int num=0;
 	VPBDIV = 0x01; // set PCLK same as CCLK i.e 60Mhz for UART
-	initUART0();
+	initUART0(); //Init UART0 @ 9600 baud-rate 60Mhz PLCK
 	
 	printf("Hey! This is your beloved printf().\nI have been redirected here with scanf()!\n");
 	

@@ -1,7 +1,7 @@
 /*(C) Umang Gajera- www.ocfreaks.com
 More Embedded tutorials @ www.ocfreaks.com/cat/embedded/
 LPC2148 LDR Interfacing Example 1 Source Code for KEIL ARM.
-http://www.ocfreaks.com/interfacing-ldr-with-lpc2148/
+http://www.ocfreaks.com/interfacing-ldr-lpc2148/
 Also see: http://www.ocfreaks.com/lpc2148-adc-programming-tutorial/
 License: GPL.*/
 

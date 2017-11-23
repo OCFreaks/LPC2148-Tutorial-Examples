@@ -47,7 +47,7 @@ int main(void)
 			IO0CLR = (1<<5); //LED OFF
 		}
 		
-		delayMS(100); //wait some time since LDRs don't react immediately.
+		delayMS(100); //wait for some time before sampling again.
 	}
 	//return 0; //This won't execute normally
 }

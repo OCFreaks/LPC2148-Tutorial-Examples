@@ -1,0 +1,8 @@
+--cpu ARM7TDMI
+".\objects\startup.o"
+".\objects\lib_funcs.o"
+".\objects\main.o"
+--strict --scatter ".\Objects\LM35_Interfacing_LPC214x.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\LM35_Interfacing_LPC214x.map" -o .\Objects\LM35_Interfacing_LPC214x.axf

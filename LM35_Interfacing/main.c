@@ -1,6 +1,6 @@
 /*(C) Umang Gajera- www.ocfreaks.com
 Interfacing LM35 Temperature Sensor with LPC2148 - Example Source Code for KEIL ARM.
-http://www.ocfreaks.com/interfacing-lm35-sensor-with-lpc2148/
+http://www.ocfreaks.com/interfacing-lm35-sensor-lpc2148/
 Also see: http://www.ocfreaks.com/lpc2148-adc-programming-tutorial/
 More Embedded tutorials @ www.ocfreaks.com/cat/embedded/
 License: GPL.*/

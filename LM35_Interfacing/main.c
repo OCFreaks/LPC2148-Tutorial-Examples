@@ -45,7 +45,7 @@ int main(void)
 		
 		result = (AD0DR6>>6) & 0x3FF; //get the 10bit ADC result
 		
-		temp = ((float)result * VREF * 100)/1023; //As per the Equation given in the tutorial
+		temp = ((float)result * VREF * 100)/1024; //As per the Equation given in the tutorial
 
 		printf("Temp = %0.1f Deg. Celsius\n" , temp);
 		

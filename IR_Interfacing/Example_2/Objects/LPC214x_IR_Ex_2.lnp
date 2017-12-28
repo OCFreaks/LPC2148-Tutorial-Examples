@@ -1,0 +1,8 @@
+--cpu ARM7TDMI
+".\objects\startup.o"
+".\objects\lib_funcs.o"
+".\objects\main.o"
+--strict --scatter ".\Objects\LPC214x_IR_Ex_2.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\LPC214x_IR_Ex_2.map" -o .\Objects\LPC214x_IR_Ex_2.axf

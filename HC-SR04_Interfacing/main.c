@@ -5,7 +5,7 @@ More Embedded tutorials @ www.ocfreaks.com/cat/embedded/
 License: GPL.*/
 
 #include <lpc214x.h>
-#include <stdio.h>		 //visit http://www.ocfreaks.com/retarget-redirect-printf-scanf-uart-keil/ 
+#include <stdio.h> //visit http://www.ocfreaks.com/retarget-redirect-printf-scanf-uart-keil/ 
 #include "lib_funcs.h" //OCFreaks LPC214x Tutorials Library Header
 
 #define TRIG (1<<2) //P0.2

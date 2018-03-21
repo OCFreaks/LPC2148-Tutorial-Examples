@@ -1,5 +1,6 @@
 /*(C) Umang Gajera- www.ocfreaks.com
 ARM7 LPC2148 Input Capture Tutorial - Example for frequency counter using ARM KEIL
+http://www.ocfreaks.com/lpc2148-timer-capture-mode-tutorial-frequency-counter-example/
 More Embedded tutorials @ www.ocfreaks.com/cat/embedded/
 License: GPL.*/
 
@@ -23,7 +24,7 @@ int main(void)
 	//Assuming PCLK = 60Mhz
 	PINSEL0 |= (1<<21); //Select CAP1.0 for P0.10
 	T1CTCR = 0x0; //Run in Timer Mode
-	T1PR = 3-1; //0.05us res //60-1; //60 clock cycles @60Mhz = 1 us
+	T1PR = 3-1; //3 Clock cycles @60Mhz = 0.05us resolution
 	T1TCR = 0x02; //Reset Timer
 	T1CCR = (1<<0) | (1<<2); //Capture on Rising Edge(0->1) and generate an interrupt
 	T1TCR = 0x01; //Enable timer1
@@ -71,18 +72,18 @@ void initPWM(void)
 	/*Assuming that PLL0 has been setup with CCLK = 60Mhz and PCLK also = 60Mhz.*/
 	/*This is a per the Setup & Init Sequence given in the tutorial*/
 
-	PINSEL0 |= (1<<15); // Select PWM2 output for Pin0.7
+	PINSEL0 |= (1<<15); //Select PWM2 output for Pin0.7
 	PWMPCR = 0x0; //Select Single Edge PWM - by default its single Edged so this line can be removed
 	PWMPR = 3-1; //3 Clock cycles @60Mhz = 0.05us
 	PWMMR0 = 20; //20x0.05 = 1us - period duration i.e. 1MHz frequency
 	PWMMR2 = 10; //10x0.05 = 0.5us - pulse duration i.e. width
-	PWMMCR = (1<<1); // Reset PWMTC on PWMMR0 match
-	PWMLER = (1<<2) | (1<<0); // update MR0 and MR2
-	PWMPCR = (1<<10); // enable PWM2 output
+	PWMMCR = (1<<1); //Reset PWMTC on PWMMR0 match
+	PWMLER = (1<<2) | (1<<0); //update MR0 and MR2
+	PWMPCR = (1<<10); //enable PWM2 output
 	PWMTCR = (1<<1) ; //Reset PWM TC & PR
 
 	//Now, the final moment - enable everything
-	PWMTCR = (1<<0) | (1<<3); // enable counters and PWM Mode
+	PWMTCR = (1<<0) | (1<<3); //enable counters and PWM Mode
 	//PWM Generation goes active now!!
 }
 

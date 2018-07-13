@@ -1,0 +1,8 @@
+--cpu ARM7TDMI
+".\objects\startup.o"
+".\objects\lib_funcs.o"
+".\objects\main.o"
+--strict --scatter ".\Objects\binary.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\binary.map" -o .\Objects\binary.axf

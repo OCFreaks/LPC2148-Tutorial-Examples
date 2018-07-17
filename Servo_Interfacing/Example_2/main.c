@@ -1,5 +1,6 @@
 /*(C) Umang Gajera - www.ocfreaks.com
 LPC2148 Servo Interfacing Tutorial - Example 2
+http://www.ocfreaks.com/lpc2148-servo-motor-interfacing-tutorial/
 More Embedded tutorials @ www.ocfreaks.com/cat/embedded/
 License: GPL.*/
 
